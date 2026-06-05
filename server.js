@@ -97,7 +97,7 @@ app.post('/api/estimates', limiter, async (req, res) => {
             `,
         });
 
-        return res.status(200).json({ message: 'Thank you! Your message has been sent successfully.' });
+        return res.status(200).json({ message: 'Thank you! Your estimate request has been submitted successfully. LuxeForm Remodeling has received your project details, and you will receive a WhatsApp message shortly to continue the conversation.' });
     } catch (error) {
         console.error(error);
         return res.status(500).json({ error: 'Internal error processing request.' });
