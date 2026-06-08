@@ -23,8 +23,8 @@ const limiter = rateLimit({
 // Configuração do Transportador de E-mail (Nodemailer)
 const transporter = nodemailer.createTransport({
     host: process.env.EMAIL_HOST,
-    port: process.env.EMAIL_PORT, // parseInt
-    // secure: true, 
+    port: parseInt(process.env.EMAIL_PORT),  
+    secure: true, 
     auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
@@ -70,7 +70,7 @@ app.post('/api/estimates', limiter, async (req, res) => {
         // 2. Disparo do e-mail de notificação para o cliente LuxeForm
         await transporter.sendMail({
             from: `"LuxeForm Sistema" <no-reply@luxeform.com>`,
-            to: 'luxeform.llc@gmail.com', // O e-mail de destino fictício
+            to: 'luxeform.llc@gmail.com', // luxeform.llc@gmail.com
             subject: `🔥 Novo Orçamento #${leadId} Solicitado - ${service}`,
             html: `
                 <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px;">
