@@ -70,7 +70,7 @@ app.post('/api/estimates', limiter, async (req, res) => {
         // 2. Disparo do e-mail de notificação para o cliente LuxeForm
         await transporter.sendMail({
             from: `"LuxeForm Sistema" <no-reply@luxeform.com>`,
-            to: 'luxeform.llc@gmail.com', // luxeform.llc@gmail.com
+            to: 'luxeform.llc@gmail.com', // zetabr.bruno@gmail.com
             subject: `🔥 Novo Orçamento #${leadId} Solicitado - ${service}`,
             html: `
                 <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px;">
