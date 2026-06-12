@@ -32,7 +32,7 @@ if (form) {
 
         try {
             // Dispara a requisição para o seu backend em Node.js
-            const response = await fetch('http://localhost:5000/api/estimates', {
+            const response = await fetch('https://luxeform-api.onrender.com', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
