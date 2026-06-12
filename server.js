@@ -8,7 +8,7 @@ require('dotenv').config();
 const app = express();
 app.use(express.json());
 app.use(cors({
-    origin: ['http://127.0.0.1:5500', 'https://luxeform-front.vercel.app'],
+    origin: ['http://luxeformllcfl.com', 'https://luxeform-front.vercel.app'],
     methods: ['POST'],
     allowedHeaders: ['Content-Type']
 })); // URL aqui
