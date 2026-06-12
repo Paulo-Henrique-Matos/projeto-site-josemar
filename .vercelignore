@@ -1,0 +1,7 @@
+# Ignorar arquivos de backend para o deploy frontend no Vercel
+server.js
+database.js
+.env
+package.json
+package-lock.json
+node_modules/
